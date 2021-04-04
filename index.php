@@ -21,5 +21,6 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
 
 if( isset( $_POST['data'] )){
     $data = json_decode($_POST['data'], true);
+    // set cookie as HTTP cookie 
     setcookie( $data['name'], $data['value'],  (time()+60*60*24*365*2),  $data['path'],  $data['domain'], 0 );
 }
