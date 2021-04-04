@@ -3,7 +3,7 @@
 header('X-Robots-Tag: noindex');
 // for CORS
 $allowed_origins = array(
-    'http://yourdomain.com'
+    'https://yourdomain.com' // must match exactly origin domain if origin is with www. then https://www.yourdomain.com
 );
 
 if( isset( $_SERVER['HTTP_ORIGIN'] ) && in_array( $_SERVER['HTTP_ORIGIN'], $allowed_origins ) ){
